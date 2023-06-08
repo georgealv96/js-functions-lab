@@ -114,3 +114,16 @@ function stringsLongerThan(arrayOfstrings, num) {
 }
 
 console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3))
+
+// Another way to do 9
+
+function stringsLongerThan(arrayOfStrings, num) {
+  for (let i = 0; i < arrayOfStrings.length; i++) {
+    if (arrayOfStrings[i].length <= num) {
+      arrayOfStrings.splice(i, 1)
+    }
+  }
+  return arrayOfStrings
+}
+
+console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3))
